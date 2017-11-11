@@ -2,3 +2,237 @@
     padding: 0;
     margin: 0;
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #F0F4F8;
+}
+
+a {
+    text-decoration: none;
+}
+
+.full {
+    width: 100%;
+}
+
+.half {
+    width: 50%;
+}
+
+.quarter {
+    width: 25%;
+}
+
+.container {
+    width: 90%;
+    height: inherit;
+}
+
+.black {
+    color: black;
+}
+
+header {
+    height: auto;
+    height: 70px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+header .container {
+    display: flex;
+    flex-direction: row;    
+}
+
+header .container .left {
+    width: 70%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;    
+}
+
+header .container .left .logo {
+    width: 25%;    
+    display: flex;
+    align-items: center;    
+}
+
+header .container .left .logo img {
+    height: 60px;     
+}
+
+header .container .left nav {
+    width: 70%;    
+}
+
+header .container .left nav .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+header .container .left nav .navigation .nav {
+    width: auto;
+    height: 67px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 0px 15px 0px 15px;
+    transition: border-top 0.5s;
+    border-top: 3px solid transparent;
+}
+
+header .container .left nav .navigation .nav:hover {
+    border-top: 3px solid #5246F2;    
+}
+
+.selected {
+    color: #5246F2;
+}
+
+header .container .left nav .navigation .nav a {
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+header .container .right {
+    width: 30%;
+    height: 70px;    
+    display: flex;
+    flex-direction: row;    
+}
+
+header .container .right .signin, header .container .right .signup {    
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .right .signin a, header .container .right .signup a{
+    padding: 10px 25px 10px 25px;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    transition: color, background-color 0.5s;
+    font-weight: 300;
+}
+
+header .container .right .signin a:hover {
+    background-color: #5246F2;
+    color: white;
+}
+
+header .container .right .signup a {
+    background-color: #5246F2;
+    color: #ffffff;    
+}
+
+header .container .right .signup a:hover {
+    background-color: transparent;
+    color: #000000;
+}
+
+@media screen and (min-width : 768px) and (max-width : 1025px) {
+    
+    .container {
+        width: 95%;
+    }
+        
+    body {
+        background: red;
+    }  
+    header .container .left {
+        width: 65%;
+    }
+    header .container .left .logo img {
+        height: 45px;
+    }
+    header .container .left nav {
+        padding: 0px 10px 0px 10px;
+    }
+    header .container .left nav .navigation .nav a {
+        font-size: 0.9em;
+    }
+    header .container .left nav .navigation .nav {    
+        height: 64px;            
+        padding: 0px 10px 0px 10px;
+    }
+    header .container .left nav .navigation .nav:hover {
+        border-top: 2px solid #5246F2;    
+    }
+    header .container .right {
+        width: 35%;
+    }
+    header .container .right .signin a, header .container .right .signup a{
+        padding: 5px 10px 5px 10px;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    .container {
+        width: 95%;
+    }        
+    body {
+        background: green;
+    }
+    header {
+        height: auto;
+    }
+    header .container {
+        flex-direction: column;
+    }
+    header .container .left {
+        width: 100%;
+    }
+    header .container .right {
+        display: none;
+    }
+    header .container .left .logo img {
+        height: 45px;
+    }
+    header .container .left nav {
+        width: 100%;        
+        padding: 0px 20px 0px 20px;        
+    }
+    header .container .left nav .navigation {    
+        justify-content: space-around;
+    }
+    header .container .left nav .navigation .nav a {
+        font-size: 0.9em;    
+    }
+    header .container .left nav .navigation .nav {    
+        height: 64px;            
+        padding: 0px 10px 0px 10px;
+    }
+    header .container .left nav .navigation .nav:hover {
+        border-top: 2px solid #5246F2;    
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95%;
+    }        
+    body {
+        background: green;
+    }
+    header {
+        height: auto;
+    }    
+    header .container .left {
+        width: 100%;
+    }
+    header .container .right {
+        display: none;
+    }
+    header .container .left .logo img {
+        height: 45px;
+    }
+    header .container .left nav {
+        display: none;        
+    } 
+}
